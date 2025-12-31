@@ -1,0 +1,2353 @@
+/* =========================================================
+   RESET & BASE
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain Light", sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: #fff;
+
+    /* ADD: prevent horizontal scroll caused by 100vw */
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   LOCOMOTIVE SCROLL
+========================================================= */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+[data-scroll-container] {
+    min-height: 100vh;
+}
+
+/* =========================================================
+   UNIVERSAL FIXED BACKGROUND VIDEO
+========================================================= */
+#universal-bg-video {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: -3;
+    pointer-events: none;
+}
+
+/* Global dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.45)
+    );
+
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* =========================================================
+   GLOBAL Z-INDEX SAFETY
+========================================================= */
+.section,
+.navbar,
+.site-footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+.btn-primary {
+    padding: 12px 26px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    color: #ffffff;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+.section {
+    min-height: 100vh;
+    padding: 120px 60px;
+}
+
+.section-title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* =========================================================
+   HOME
+========================================================= */
+.home {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-glass {
+    padding: 80px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+}
+
+.home h1 {
+    font-size: 72px;
+    margin-bottom: 24px;
+}
+
+/* =========================================================
+   FOCUS SECTION
+========================================================= */
+.focus {
+    padding-top: 120px;
+}
+
+.focus-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.focus-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.focus-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* IMPORTANT: width: 100vw KEPT (as requested) */
+.focus-card {
+    width: 30vw;
+    max-width: 100%; /* ADD: prevent overflow */
+    height: 400px;
+    
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease,
+        filter 0.6s ease;
+}
+
+/* Video inside card */
+.card-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+}
+
+/* Centered text */
+.card-content {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================================
+   LEARNING PATHS – PREMIUM DESIGN
+========================================================= */
+.paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 48px;
+}
+
+.path-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    padding: 50px 40px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+
+    text-align: center;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease,
+        background 0.5s ease;
+}
+
+.path-card h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.path-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "silk serif", serif;
+}
+
+.path-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(147, 51, 234, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Glow layer */
+.path-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+    background: linear-gradient(
+        135deg,
+        rgba(147, 51, 234, 0.35),
+        rgba(79, 70, 229, 0.35),
+        transparent
+    );
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.path-card:hover::before {
+    opacity: 1;
+}
+
+/* Optional external-link indicator */
+.path-card::after {
+    /* content: "↗"; */
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* =========================================================
+   GLOBAL GRADIENT BACKGROUND
+========================================================= */
+#global-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    filter: blur(80px);
+}
+
+/* =========================================================
+   JOIN COMMUNITY SECTION
+========================================================= */
+.join-community {
+    text-align: center;
+    padding: 140px 40px;
+}
+
+.join-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.join-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.join-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 60px;
+}
+
+.join-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+
+.join-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 18px 36px;
+    min-width: 220px;
+
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(16px);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease;
+}
+
+.join-btn i {
+    font-size: 20px;
+}
+
+/* Brand hover glows */
+.join-btn.instagram:hover { box-shadow: 0 20px 60px rgba(225,48,108,0.45); }
+.join-btn.linkedin:hover  { box-shadow: 0 20px 60px rgba(10,102,194,0.45); }
+.join-btn.whatsapp:hover  { box-shadow: 0 20px 60px rgba(37,211,102,0.45); }
+.join-btn.email:hover     { box-shadow: 0 20px 60px rgba(79,70,229,0.45); }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.site-footer {
+    position: relative;
+    padding: 120px 20px 100px;
+
+    background: radial-gradient(
+        circle at top,
+        rgba(255,255,255,0),
+        rgb(0,0,0)
+    );
+
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.footer-main-text {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.footer-email {
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.footer-tagline {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.65);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+
+    .section {
+        padding: 100px 24px;
+    }
+
+    .home h1 {
+        font-size: 44px;
+    }
+
+    .focus-row {
+        flex-direction: column;
+    }
+
+    /* MODIFY (not remove): 100vw → 100% on mobile */
+    .focus-card {
+        width: 100%;
+        height: 280px;
+    }
+
+    .path-card {
+        padding: 36px 28px;
+    }
+
+    .path-card h3 {
+        font-size: 20px;
+    }
+
+    .path-card p {
+        font-size: 14px;
+    }
+
+    .join-title {
+        font-size: 38px;
+    }
+
+    .join-btn {
+        min-width: 100%;
+        justify-content: center;
+    }
+
+    .site-footer {
+        padding: 90px 16px 70px;
+    }
+
+    .footer-logo img {
+        height: 56px;
+    }
+}
+
+/* =========================================================
+   MOBILE NAVBAR SIMPLIFICATION
+========================================================= */
+@media (max-width: 768px) {
+
+    /* Hide nav links on mobile */
+    .nav-links {
+        display: none;
+    }
+
+    /* Keep logo visible */
+    .logo {
+        flex: 1;
+    }
+
+    /* Keep Get Started button visible and aligned */
+    .navbar .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+}
+/* =========================================================
+   FOCUS CARDS – UNIFIED MOBILE BEHAVIOR (<600px)
+========================================================= */
+@media (max-width: 600px) {
+
+    /* Force all focus rows to stack uniformly */
+    .focus-row,
+    .focus-row.reverse {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Make ALL focus cards behave like Web Dev card */
+    .focus-card {
+        width: 100%;
+        max-width: 100%;
+        height: 320px;          /* same visual weight */
+        margin: 0 auto;
+        border-radius: 18px;
+    }
+
+    /* Center text properly */
+    .card-content h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Ensure videos scale correctly */
+    .card-video {
+        opacity: 1;             /* visible like web-dev */
+        object-fit: cover;
+    }
+}
+
+
+/* =========================================================
+   MOBILE VIDEO VISIBILITY
+========================================================= */
+@media (max-width: 600px) {
+    .card-video {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   ROADMAP SECTION
+========================================================= */
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 36px;
+}
+
+/* =========================================================
+   ROADMAP CARD – BASE
+========================================================= */
+
+.roadmap-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 36px 28px;
+    border-radius: 18px;
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+
+    cursor: pointer;
+
+    font-family: "Plain Light", sans-serif;
+    letter-spacing: 0.3px;
+
+    transition:
+        transform 0.6s cubic-bezier(.22,.61,.36,1),
+        box-shadow 0.6s cubic-bezier(.22,.61,.36,1),
+        background 0.6s cubic-bezier(.22,.61,.36,1),
+        font-family 0.3s ease,
+        letter-spacing 0.3s ease;
+
+    will-change: transform;
+}
+
+/* =========================================================
+   ROADMAP CARD – HOVER EFFECT
+========================================================= */
+
+.roadmap-card:hover {
+    transform: translateY(-12px) scale(1.05);
+    font-family: "silk serif", serif;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   GLOW LAYERS
+========================================================= */
+
+.roadmap-card::before,
+.roadmap-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* radial glow */
+.roadmap-card::before {
+    inset: -2px;
+    background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%),
+        var(--glow-strong),
+        transparent 60%
+    );
+}
+
+/* gradient wash */
+.roadmap-card::after {
+    background: linear-gradient(
+        120deg,
+        var(--glow-soft),
+        transparent,
+        var(--glow-soft)
+    );
+    background-size: 300% 300%;
+}
+
+/* activate glow */
+.roadmap-card:hover::before,
+.roadmap-card:hover::after {
+    opacity: 1;
+    animation:
+        glow-pulse 4s ease-in-out infinite,
+        gradient-shift 8s ease infinite;
+}
+
+/* =========================================================
+   GLOW ANIMATIONS
+========================================================= */
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes gradient-shift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================================================
+   ROADMAP COLOR THEMES
+   (use data-theme in HTML)
+========================================================= */
+
+.roadmap-card {
+    --glow-strong: rgba(147, 51, 234, 0.6);
+    --glow-soft: rgba(79, 70, 229, 0.25);
+}
+
+.roadmap-card[data-theme="blue"] {
+    --glow-strong: rgba(59,130,246,0.6);
+    --glow-soft: rgba(99,102,241,0.25);
+}
+
+.roadmap-card[data-theme="green"] {
+    --glow-strong: rgba(34,197,94,0.6);
+    --glow-soft: rgba(16,185,129,0.25);
+}
+
+.roadmap-card[data-theme="yellow"] {
+    --glow-strong: rgba(234,179,8,0.6);
+    --glow-soft: rgba(245,158,11,0.25);
+}
+
+.roadmap-card[data-theme="pink"] {
+    --glow-strong: rgba(236,72,153,0.6);
+    --glow-soft: rgba(168,85,247,0.25);
+}
+
+.roadmap-card[data-theme="cyan"] {
+    --glow-strong: rgba(6,182,212,0.6);
+    --glow-soft: rgba(14,165,233,0.25);
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .roadmap-card {
+        padding: 30px 22px;
+        font-size: 16px;
+        border-radius: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   PROGRAMMING FOUNDATIONS – HERO
+========================================================= */
+
+.pf-hero {
+    padding-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pf-hero .home-glass {
+    max-width: 900px;
+    text-align: center;
+}
+
+.pf-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.pf-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 18px;
+}
+
+.pf-meta {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    color: rgba(255,255,255,0.65);
+}
+
+/* =========================================================
+   PROGRAMMING FOUNDATIONS – SECTIONS
+========================================================= */
+
+.pf-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pf-section .section-title {
+    margin-bottom: 40px;
+}
+
+/* paragraph text */
+.pf-text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: center;
+    color: rgba(255,255,255,0.85);
+}
+
+/* =========================================================
+   BULLET POINTS
+========================================================= */
+
+.pf-points {
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    list-style: none;
+    padding: 0;
+}
+
+.pf-points li {
+    position: relative;
+    padding-left: 28px;
+
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+}
+
+.pf-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    color: #8b5cf6;
+    font-weight: 600;
+}
+
+/* =========================================================
+   PF CARDS (REUSE PATH CARD STYLE)
+========================================================= */
+
+.pf-card {
+    text-align: left;
+}
+
+.pf-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.pf-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    font-family: "silk serif", serif;
+}
+
+/* inline code */
+.pf-card code {
+    padding: 2px 6px;
+    border-radius: 6px;
+
+    background: rgba(255,255,255,0.1);
+    font-size: 14px;
+    font-family: monospace;
+}
+
+/* =========================================================
+   NEXT STEP SECTION
+========================================================= */
+
+.pf-next {
+    text-align: center;
+}
+
+.pf-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.pf-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .pf-hero {
+        padding-top: 120px;
+    }
+
+    .pf-hero h1 {
+        font-size: 42px;
+    }
+
+    .pf-hero p {
+        font-size: 16px;
+    }
+
+    .pf-text {
+        font-size: 16px;
+    }
+
+    .pf-card h3 {
+        font-size: 18px;
+    }
+
+    .pf-next h2 {
+        font-size: 28px;
+    }
+}
+/* =========================================================
+   DSA PAGE STYLES
+========================================================= */
+
+.dsa-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.dsa-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.dsa-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.dsa-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.dsa-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dsa-text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.dsa-points {
+    max-width: 700px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dsa-points li {
+    padding-left: 26px;
+    position: relative;
+    font-size: 16px;
+}
+
+.dsa-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.dsa-next {
+    text-align: center;
+}
+
+.dsa-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.dsa-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .dsa-hero h1 {
+        font-size: 42px;
+    }
+
+    .dsa-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   CODING & INTERVIEW PAGE
+========================================================= */
+
+.ci-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.ci-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.ci-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.ci-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.ci-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ci-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.ci-text.center {
+    text-align: center;
+}
+
+.ci-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ci-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.ci-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.ci-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+
+.ci-note.center {
+    text-align: center;
+}
+
+.ci-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.ci-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+}
+
+.ci-next {
+    text-align: center;
+}
+
+.ci-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.ci-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .ci-hero h1 {
+        font-size: 42px;
+    }
+
+    .ci-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   WEB DEVELOPMENT PAGE
+========================================================= */
+
+.wd-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.wd-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.wd-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.wd-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.wd-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.wd-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.wd-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wd-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.wd-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.wd-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.wd-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.wd-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+}
+
+.wd-next {
+    text-align: center;
+}
+
+.wd-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.wd-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .wd-hero h1 {
+        font-size: 42px;
+    }
+
+    .wd-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   WEB DEVELOPMENT PAGE
+========================================================= */
+
+.wd-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.btn-primary{
+    text-decoration: none;
+}
+
+.wd-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.wd-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.wd-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.wd-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.wd-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.wd-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wd-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.wd-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.wd-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.wd-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.wd-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+}
+
+.wd-next {
+    text-align: center;
+}
+
+.wd-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.wd-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .wd-hero h1 {
+        font-size: 42px;
+    }
+
+    .wd-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   BACKEND DEVELOPMENT PAGE
+========================================================= */
+
+.be-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.be-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.be-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.be-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.be-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.be-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.be-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.be-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.be-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.be-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.be-subtitle {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.be-next {
+    text-align: center;
+}
+
+.be-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.be-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .be-hero h1 {
+        font-size: 42px;
+    }
+
+    .be-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   DATA SCIENCE PAGE
+========================================================= */
+
+.ds-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.ds-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.ds-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.ds-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.ds-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ds-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.ds-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ds-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.ds-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.ds-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.ds-subtitle {
+    margin-top: 28px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.ds-next {
+    text-align: center;
+}
+
+.ds-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.ds-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .ds-hero h1 {
+        font-size: 42px;
+    }
+
+    .ds-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   MACHINE LEARNING PAGE
+========================================================= */
+
+.ml-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.ml-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.ml-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.ml-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.ml-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ml-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.ml-text.center {
+    text-align: center;
+}
+
+.ml-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ml-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.ml-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.ml-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.ml-subtitle {
+    margin-top: 28px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.ml-next {
+    text-align: center;
+}
+
+.ml-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.ml-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .ml-hero h1 {
+        font-size: 42px;
+    }
+
+    .ml-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   GENERATIVE AI PAGE
+========================================================= */
+
+.genai-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.genai-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.genai-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.genai-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.genai-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.genai-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.genai-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.genai-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.genai-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.genai-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.genai-subtitle {
+    margin-top: 28px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.genai-next {
+    text-align: center;
+}
+
+.genai-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.genai-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .genai-hero h1 {
+        font-size: 42px;
+    }
+
+    .genai-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   CLOUD & DEVOPS PAGE
+========================================================= */
+
+.cloud-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.cloud-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.cloud-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.cloud-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.cloud-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cloud-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.cloud-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cloud-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.cloud-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.cloud-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.cloud-subtitle {
+    margin-top: 28px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.cloud-next {
+    text-align: center;
+}
+
+.cloud-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.cloud-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .cloud-hero h1 {
+        font-size: 42px;
+    }
+
+    .cloud-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   MOBILE APP DEVELOPMENT PAGE
+========================================================= */
+
+.mobile-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.mobile-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.mobile-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.mobile-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.mobile-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mobile-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.mobile-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mobile-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.mobile-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.mobile-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.mobile-subtitle {
+    margin-top: 28px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.mobile-next {
+    text-align: center;
+}
+
+.mobile-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.mobile-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .mobile-hero h1 {
+        font-size: 42px;
+    }
+
+    .mobile-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   UI DESIGN PAGE
+========================================================= */
+
+.ui-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.ui-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.ui-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.ui-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.ui-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ui-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.ui-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ui-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.ui-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.ui-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.ui-subtitle {
+    margin-top: 28px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.ui-next {
+    text-align: center;
+}
+
+.ui-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.ui-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .ui-hero h1 {
+        font-size: 42px;
+    }
+
+    .ui-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   UX DESIGN PAGE
+========================================================= */
+
+.ux-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.ux-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.ux-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.ux-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.ux-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ux-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.ux-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ux-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.ux-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+}
+
+.ux-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.ux-next {
+    text-align: center;
+}
+
+.ux-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.ux-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .ux-hero h1 {
+        font-size: 42px;
+    }
+
+    .ux-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   SYSTEM DESIGN PAGE
+========================================================= */
+
+.sd-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.sd-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.sd-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.sd-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.sd-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sd-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.sd-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sd-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.sd-points li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+}
+
+.sd-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.sd-next {
+    text-align: center;
+}
+
+.sd-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.sd-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .sd-hero h1 {
+        font-size: 42px;
+    }
+
+    .sd-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   COMPUTER NETWORKS PAGE
+========================================================= */
+
+.cn-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.cn-hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.cn-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.cn-meta {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+}
+
+.cn-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cn-text {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+}
+
+.cn-points {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cn-points li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 16px;
+}
+
+.cn-points li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+}
+
+.cn-note {
+    margin-top: 18px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+.cn-next {
+    text-align: center;
+}
+
+.cn-next h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.cn-next p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .cn-hero h1 {
+        font-size: 42px;
+    }
+
+    .cn-text {
+        font-size: 16px;
+    }
+}
+/* =========================================================
+   DISABLE ROADMAP HOVER EFFECTS ON TOUCH DEVICES
+========================================================= */
+
+/* Touch devices & small screens */
+@media (hover: none), (pointer: coarse), (max-width: 1024px) {
+
+    .roadmap-card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+        background: rgba(255, 255, 255, 0.06) !important;
+        font-family: "Plain Light", sans-serif !important;
+        letter-spacing: 0.3px !important;
+    }
+
+    .roadmap-card::before,
+    .roadmap-card::after {
+        opacity: 0 !important;
+        animation: none !important;
+    }
+}
+@media (hover: none), (pointer: coarse) {
+    .roadmap-card {
+        cursor: default;
+    }
+}
+/* =========================================================
+   MOBILE FIX: ENSURE ROADMAP CARD IS CLICKABLE
+========================================================= */
+
+@media (hover: none), (pointer: coarse), (max-width: 1024px) {
+
+    .roadmap-card {
+        pointer-events: auto;
+    }
+
+    .roadmap-card::before,
+    .roadmap-card::after {
+        pointer-events: none !important;
+    }
+}

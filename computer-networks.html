@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Networks Roadmap | K-12</title>
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video id="universal-bg-video"
+        src="assets/videos/hero-video.mp4"
+        autoplay muted loop playsinline></video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="K-12 Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#roadmaps">Roadmaps</a></li>
+            <li><a href="index.html#paths">Docs</a></li>
+        </ul>
+
+        <a href="index.html#paths" class="btn-primary">Get Started</a>
+    </nav>
+
+    <!-- LOCOMOTIVE CONTAINER -->
+    <div data-scroll-container>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="section cn-hero" data-scroll-section>
+                <div class="home-glass">
+                    <h1>Computer Networks Roadmap</h1>
+                    <p>
+                        Computer Networks explain how devices communicate,
+                        how data travels, and how the Internet actually works.
+                        This subject is interview + exam critical.
+                    </p>
+                    <span class="cn-meta">
+                        OSI · TCP/IP · HTTP · DNS · TCP vs UDP
+                    </span>
+                </div>
+            </section>
+
+            <!-- PHASE 0 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 0: What is a Computer Network?</h2>
+
+                <p class="cn-text">
+                    Computer Network ka matlab hai multiple devices ka
+                    ek-dusre se data packets ke through communicate karna,
+                    defined protocols follow karke.
+                </p>
+
+                <ul class="cn-points">
+                    <li>Data packets ke through communication</li>
+                    <li>Rules & protocols define hote hain</li>
+                    <li>Browser → Server → Response</li>
+                </ul>
+
+                <p class="cn-note">
+                    Interview: “What is a computer network?”
+                </p>
+            </section>
+
+            <!-- PHASE 1 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 1: Network Fundamentals</h2>
+
+                <ul class="cn-points">
+                    <li>Node, Link</li>
+                    <li>Bandwidth, Latency</li>
+                    <li>Throughput, Packet</li>
+                </ul>
+
+                <p class="cn-note">
+                    Ye terms interviews me baar-baar use hote hain.
+                </p>
+            </section>
+
+            <!-- PHASE 2 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 2: OSI Model</h2>
+
+                <ul class="cn-points">
+                    <li>Physical</li>
+                    <li>Data Link</li>
+                    <li>Network</li>
+                    <li>Transport</li>
+                    <li>Session</li>
+                    <li>Presentation</li>
+                    <li>Application</li>
+                </ul>
+
+                <p class="cn-note">
+                    Interview tip: Har layer ka purpose explain karo, definition nahi.
+                </p>
+            </section>
+
+            <!-- PHASE 3 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 3: TCP/IP Model</h2>
+
+                <ul class="cn-points">
+                    <li>Network Interface</li>
+                    <li>Internet</li>
+                    <li>Transport</li>
+                    <li>Application</li>
+                </ul>
+
+                <p class="cn-note">
+                    OSI = theoretical, TCP/IP = practical (Internet).
+                </p>
+            </section>
+
+            <!-- PHASE 4 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 4: IP Addressing</h2>
+
+                <ul class="cn-points">
+                    <li>IPv4 vs IPv6</li>
+                    <li>Public vs Private IP</li>
+                    <li>Static vs Dynamic IP</li>
+                    <li>Subnet (basic idea)</li>
+                </ul>
+
+                <p class="cn-note">
+                    Interview: “Why IPv6 was introduced?”
+                </p>
+            </section>
+
+            <!-- PHASE 5 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 5: Transport Layer</h2>
+
+                <ul class="cn-points">
+                    <li>TCP → reliable, ordered, slow</li>
+                    <li>UDP → fast, no guarantee</li>
+                    <li>TCP: HTTP, Email</li>
+                    <li>UDP: Streaming, Gaming</li>
+                </ul>
+
+                <p class="cn-note">
+                    TCP vs UDP = interview favorite.
+                </p>
+            </section>
+
+            <!-- PHASE 6 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 6: Application Layer Protocols</h2>
+
+                <ul class="cn-points">
+                    <li>HTTP / HTTPS</li>
+                    <li>DNS (domain → IP)</li>
+                    <li>FTP</li>
+                    <li>SMTP, POP3, IMAP</li>
+                </ul>
+
+                <p class="cn-note">
+                    “What happens when you type a URL?” — VERY common.
+                </p>
+            </section>
+
+            <!-- PHASE 7 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 7: Network Devices</h2>
+
+                <ul class="cn-points">
+                    <li>Hub</li>
+                    <li>Switch</li>
+                    <li>Router</li>
+                    <li>Gateway</li>
+                    <li>Firewall</li>
+                </ul>
+
+                <p class="cn-note">
+                    Router vs Switch = classic question.
+                </p>
+            </section>
+
+            <!-- PHASE 8 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 8: Data Transmission & Errors</h2>
+
+                <ul class="cn-points">
+                    <li>Simplex, Half-duplex, Full-duplex</li>
+                    <li>Parity Check</li>
+                    <li>Checksum</li>
+                    <li>CRC (concept)</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 9 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 9: Flow & Congestion Control</h2>
+
+                <ul class="cn-points">
+                    <li>Flow control (sender vs receiver)</li>
+                    <li>Congestion control (network overload)</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 10 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 10: Network Security</h2>
+
+                <ul class="cn-points">
+                    <li>HTTPS</li>
+                    <li>Encryption (concept)</li>
+                    <li>Firewall</li>
+                    <li>VPN (basic)</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 11 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 11: Real-World Concepts</h2>
+
+                <ul class="cn-points">
+                    <li>NAT</li>
+                    <li>Proxy</li>
+                    <li>Load Balancer (intro)</li>
+                    <li>CDN (intro)</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 12 -->
+            <section class="section cn-section" data-scroll-section>
+                <h2 class="section-title">Phase 12: Interview Focus</h2>
+
+                <ul class="cn-points">
+                    <li>OSI vs TCP/IP</li>
+                    <li>TCP vs UDP</li>
+                    <li>HTTP & DNS flow</li>
+                    <li>Router vs Switch</li>
+                </ul>
+
+                <p class="cn-note">
+                    Answer short, structured, example-based rakho.
+                </p>
+            </section>
+
+            <!-- FINAL -->
+            <section class="section cn-next" data-scroll-section>
+                <h2>Final Computer Networks Checklist</h2>
+
+                <p>
+                    Tum CN-ready ho jab tum OSI & TCP/IP clearly explain kar sako,
+                    TCP vs UDP ka use-case bata sako,
+                    aur HTTP + DNS ka real flow samajhte ho.
+                </p>
+
+                <a href="system-design.html" class="btn-primary">
+                    CN → System Design →
+                </a>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" data-scroll-section>
+            <div class="footer-content">
+                <img src="assets/images/logo.png" alt="K-12 Logo" height="60">
+                <p>© 2025 K-12 Community – Pacific Institute of Technology</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- PAGE ANIMATIONS -->
+    <script>
+        if (document.querySelector(".cn-hero")) {
+
+            gsap.from(".cn-hero h1", {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            gsap.from(".cn-hero p", {
+                y: 40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 0.8
+            });
+
+            gsap.utils.toArray(".cn-section .section-title").forEach(title => {
+                gsap.from(title, {
+                    scrollTrigger: {
+                        trigger: title,
+                        scroller: "[data-scroll-container]",
+                        start: "top 85%"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming Foundations | K-12</title>
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video id="universal-bg-video"
+        src="assets/videos/hero-video4.mp4"
+        autoplay muted loop playsinline></video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="K-12 Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#roadmaps">Roadmaps</a></li>
+            <li><a href="index.html#paths">Docs</a></li>
+        </ul>
+
+        <a href="index.html#paths" class="btn-primary">Get Started</a>
+    </nav>
+
+    <!-- LOCOMOTIVE SCROLL CONTAINER -->
+    <div data-scroll-container>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="section pf-hero" data-scroll-section>
+                <div class="home-glass">
+                    <h1>Programming Foundations</h1>
+
+                    <p>
+                        Programming Foundations is the most critical phase of your
+                        software engineering journey. This stage focuses on logic,
+                        execution flow, and core principles that remain constant
+                        across all programming languages.
+                    </p>
+
+                    <span class="pf-meta">
+                        Beginner · Mandatory · Duration: 0–1 Month
+                    </span>
+                </div>
+            </section>
+
+            <!-- WHY FOUNDATIONS -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">Why Programming Foundations Matter</h2>
+
+                <p class="pf-text">
+                    Programming is not about remembering syntax.
+                    It is about understanding how instructions are executed,
+                    how decisions are made, and how problems are broken
+                    into logical steps.
+                </p>
+
+                <ul class="pf-points">
+                    <li>Logic is independent of programming language</li>
+                    <li>Strong foundations reduce confusion in advanced topics</li>
+                    <li>Debugging becomes easier with clear fundamentals</li>
+                    <li>All frameworks depend on these basics</li>
+                </ul>
+            </section>
+
+            <!-- WHAT IS A PROGRAM -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">What Is a Program?</h2>
+
+                <p class="pf-text">
+                    A program is a sequence of well-defined instructions
+                    written to perform a specific task.
+                    These instructions are executed by the CPU in a defined order.
+                </p>
+
+                <ul class="pf-points">
+                    <li>Programs accept input</li>
+                    <li>Programs process data</li>
+                    <li>Programs produce output</li>
+                </ul>
+            </section>
+
+            <!-- COMPILER VS INTERPRETER -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">Compiler vs Interpreter</h2>
+
+                <div class="paths-grid">
+
+                    <div class="path-card pf-card">
+                        <h3>Compiler</h3>
+                        <p>
+                            A compiler converts the entire source code into
+                            machine code before execution.
+                        </p>
+                        <ul class="pf-points">
+                            <li>Fast execution</li>
+                            <li>Errors shown after compilation</li>
+                            <li>Examples: C, C++</li>
+                        </ul>
+                    </div>
+
+                    <div class="path-card pf-card">
+                        <h3>Interpreter</h3>
+                        <p>
+                            An interpreter executes the code line by line
+                            and reports errors immediately.
+                        </p>
+                        <ul class="pf-points">
+                            <li>Slower execution</li>
+                            <li>Easier debugging</li>
+                            <li>Examples: Python, JavaScript</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SYNTAX VS SEMANTICS -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">Syntax vs Semantics</h2>
+
+                <div class="paths-grid">
+
+                    <div class="path-card pf-card">
+                        <h3>Syntax</h3>
+                        <p>
+                            Syntax refers to the rules for writing code.
+                            Incorrect syntax prevents program execution.
+                        </p>
+                    </div>
+
+                    <div class="path-card pf-card">
+                        <h3>Semantics</h3>
+                        <p>
+                            Semantics refers to the meaning of code.
+                            Code may run but still produce incorrect results.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- VARIABLES -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">Variables and Data Types</h2>
+
+                <p class="pf-text">
+                    Variables store data in memory.
+                    Data types define the nature and size of stored data.
+                </p>
+
+                <ul class="pf-points">
+                    <li>Integer, Float, Double</li>
+                    <li>Character and Boolean</li>
+                    <li>Memory allocation depends on data type</li>
+                </ul>
+            </section>
+
+            <!-- CONTROL FLOW -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">Control Flow and Logic</h2>
+
+                <div class="paths-grid">
+
+                    <div class="path-card pf-card">
+                        <h3>Conditional Statements</h3>
+                        <p>
+                            Used for decision making:
+                            <code>if</code>, <code>else</code>, <code>switch</code>
+                        </p>
+                    </div>
+
+                    <div class="path-card pf-card">
+                        <h3>Loops</h3>
+                        <p>
+                            Used for repetition:
+                            <code>for</code>, <code>while</code>, <code>do-while</code>
+                        </p>
+                    </div>
+
+                    <div class="path-card pf-card">
+                        <h3>Loop Control</h3>
+                        <p>
+                            Alters execution flow:
+                            <code>break</code>, <code>continue</code>
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- FIRST LANGUAGE -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">Choosing Your First Language</h2>
+
+                <ul class="pf-points">
+                    <li><strong>Python:</strong> beginner-friendly and logic-focused</li>
+                    <li><strong>Java:</strong> strong OOP and industry relevance</li>
+                    <li><strong>C:</strong> deep understanding of memory and execution</li>
+                </ul>
+            </section>
+
+            <!-- PRACTICE -->
+            <section class="section pf-section" data-scroll-section>
+                <h2 class="section-title">Practice (Mandatory)</h2>
+
+                <ul class="pf-points">
+                    <li>Calculator program</li>
+                    <li>Number guessing game</li>
+                    <li>Pattern printing</li>
+                    <li>Dry run logic on paper</li>
+                </ul>
+            </section>
+
+            <!-- NEXT -->
+            <section class="section pf-next" data-scroll-section>
+                <h2>Next Step</h2>
+
+                <p>
+                    After completing Programming Foundations,
+                    move to Data Structures and Algorithms
+                    to improve efficiency and performance.
+                </p>
+
+                <a href="dsa.html" class="btn-primary">
+                    Go to DSA Roadmap →
+                </a>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" data-scroll-section>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="K-12 Logo">
+                </div>
+
+                <p class="footer-main-text">
+                    © 2025 K-12 Community – Pacific Institute of Technology
+                </p>
+
+                <p class="footer-tagline">
+                    Build strong foundations before chasing frameworks.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+
+</body>
+</html>

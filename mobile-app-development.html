@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile App Development Roadmap | K-12</title>
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video id="universal-bg-video"
+        src="assets/videos/hero-video13.mp4"
+        autoplay muted loop playsinline></video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="K-12 Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#roadmaps">Roadmaps</a></li>
+            <li><a href="index.html#paths">Docs</a></li>
+        </ul>
+
+        <a href="index.html#paths" class="btn-primary">Get Started</a>
+    </nav>
+
+    <!-- LOCOMOTIVE CONTAINER -->
+    <div data-scroll-container>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="section mobile-hero" data-scroll-section>
+                <div class="home-glass">
+                    <h1>Mobile App Development Roadmap</h1>
+
+                    <p>
+                        Mobile App Development focuses on building performant,
+                        user-friendly applications for Android and iOS using
+                        native or cross-platform technologies.
+                    </p>
+
+                    <span class="mobile-meta">
+                        Android · iOS · Cross-Platform
+                    </span>
+                </div>
+            </section>
+
+            <!-- PHASE 0 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 0: Mobile App Ecosystem</h2>
+
+                <p class="mobile-text">
+                    Mobile App Development ka matlab hai Android aur iOS platforms
+                    ke liye applications banana jo real users use karte hain.
+                </p>
+
+                <ul class="mobile-points">
+                    <li>Android & iOS platforms</li>
+                    <li>Native apps</li>
+                    <li>Cross-platform apps</li>
+                </ul>
+
+                <p class="mobile-note">
+                    Interview: “Native vs Cross-platform — difference?”
+                </p>
+            </section>
+
+            <!-- PHASE 1 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 1: Choose Your Path</h2>
+
+                <h3 class="mobile-subtitle">Native Android</h3>
+                <ul class="mobile-points">
+                    <li>Kotlin / Java</li>
+                    <li>Android Studio</li>
+                    <li>Best performance</li>
+                </ul>
+
+                <h3 class="mobile-subtitle">Native iOS</h3>
+                <ul class="mobile-points">
+                    <li>Swift</li>
+                    <li>Xcode</li>
+                    <li>Apple ecosystem</li>
+                </ul>
+
+                <h3 class="mobile-subtitle">Cross-Platform</h3>
+                <ul class="mobile-points">
+                    <li>Flutter (Dart)</li>
+                    <li>React Native (JavaScript)</li>
+                    <li>Single codebase</li>
+                </ul>
+
+                <p class="mobile-note">
+                    Industry me cross-platform demand fast grow kar rahi hai.
+                </p>
+            </section>
+
+            <!-- PHASE 2 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 2: Programming Foundations</h2>
+
+                <ul class="mobile-points">
+                    <li>Variables & data types</li>
+                    <li>Functions</li>
+                    <li>OOP basics</li>
+                    <li>Arrays / Lists</li>
+                    <li>Asynchronous code</li>
+                </ul>
+
+                <p class="mobile-note">
+                    Mobile apps heavily async hote hain.
+                </p>
+            </section>
+
+            <!-- PHASE 3 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 3: Mobile UI Fundamentals</h2>
+
+                <ul class="mobile-points">
+                    <li>Screens & layouts</li>
+                    <li>Components / Widgets</li>
+                    <li>Navigation</li>
+                    <li>Responsive UI</li>
+                </ul>
+
+                <p class="mobile-note">
+                    Bad UI = app uninstall.
+                </p>
+            </section>
+
+            <!-- PHASE 4 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 4: Platform-Specific Basics</h2>
+
+                <ul class="mobile-points">
+                    <li>Android lifecycle & permissions</li>
+                    <li>Flutter widgets & build method</li>
+                    <li>React Native components & hooks</li>
+                </ul>
+
+                <p class="mobile-note">
+                    Lifecycle questions interview favorite hote hain.
+                </p>
+            </section>
+
+            <!-- PHASE 5 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 5: State Management</h2>
+
+                <ul class="mobile-points">
+                    <li>Flutter: Provider / Bloc</li>
+                    <li>React Native: Context / Redux</li>
+                </ul>
+
+                <p class="mobile-note">
+                    Without state management app unmanageable ho jaata hai.
+                </p>
+            </section>
+
+            <!-- PHASE 6 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 6: Backend & API Integration</h2>
+
+                <ul class="mobile-points">
+                    <li>REST APIs</li>
+                    <li>JSON</li>
+                    <li>HTTP methods</li>
+                    <li>Error handling</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 7 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 7: Database & Local Storage</h2>
+
+                <ul class="mobile-points">
+                    <li>Shared Preferences</li>
+                    <li>SQLite</li>
+                    <li>Async Storage</li>
+                    <li>Offline caching</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 8 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 8: Authentication & Security</h2>
+
+                <ul class="mobile-points">
+                    <li>Login / Signup</li>
+                    <li>JWT tokens</li>
+                    <li>Secure storage</li>
+                    <li>Permissions handling</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 9 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 9: Advanced Mobile Features</h2>
+
+                <ul class="mobile-points">
+                    <li>Camera</li>
+                    <li>GPS / Location</li>
+                    <li>Notifications</li>
+                    <li>Sensors</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 10 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 10: Testing & Debugging</h2>
+
+                <ul class="mobile-points">
+                    <li>Unit testing</li>
+                    <li>UI testing</li>
+                    <li>Crash logs</li>
+                    <li>Performance monitoring</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 11 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 11: Deployment & Publishing</h2>
+
+                <ul class="mobile-points">
+                    <li>APK vs AAB</li>
+                    <li>Play Store guidelines</li>
+                    <li>App Store Connect</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 12 -->
+            <section class="section mobile-section" data-scroll-section>
+                <h2 class="section-title">Phase 12: Projects</h2>
+
+                <ul class="mobile-points">
+                    <li>Todo / Notes app</li>
+                    <li>Auth-based app</li>
+                    <li>API-driven app</li>
+                    <li>Full-stack mobile app</li>
+                </ul>
+            </section>
+
+            <!-- FINAL -->
+            <section class="section mobile-next" data-scroll-section>
+                <h2>Final Mobile Dev Checklist</h2>
+
+                <p>
+                    Tum mobile dev-ready ho jab tum complete app bana sakte ho,
+                    APIs integrate karte ho,
+                    state management samajhte ho,
+                    aur app deploy kar sakte ho.
+                </p>
+
+                <a href="flutter-vs-react-native.html" class="btn-primary">
+                    Flutter vs React Native →
+                </a>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" data-scroll-section>
+            <div class="footer-content">
+                <img src="assets/images/logo.png" alt="K-12 Logo" height="60">
+                <p>© 2025 K-12 Community – Pacific Institute of Technology</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- PAGE ANIMATIONS -->
+    <script>
+        if (document.querySelector(".mobile-hero")) {
+
+            gsap.from(".mobile-hero h1", {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            gsap.from(".mobile-hero p", {
+                y: 40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 0.8
+            });
+
+            gsap.utils.toArray(".mobile-section .section-title").forEach(title => {
+                gsap.from(title, {
+                    scrollTrigger: {
+                        trigger: title,
+                        scroller: "[data-scroll-container]",
+                        start: "top 85%"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

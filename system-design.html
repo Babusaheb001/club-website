@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Design Roadmap | K-12</title>
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video id="universal-bg-video"
+        src="assets/videos/hero-video.mp4"
+        autoplay muted loop playsinline></video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="K-12 Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#roadmaps">Roadmaps</a></li>
+            <li><a href="index.html#paths">Docs</a></li>
+        </ul>
+
+        <a href="index.html#paths" class="btn-primary">Get Started</a>
+    </nav>
+
+    <!-- LOCOMOTIVE CONTAINER -->
+    <div data-scroll-container>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="section sd-hero" data-scroll-section>
+                <div class="home-glass">
+                    <h1>System Design Roadmap</h1>
+                    <p>
+                        System Design focuses on building scalable,
+                        reliable and high-performance software systems.
+                        Interviews test thinking, not perfection.
+                    </p>
+                    <span class="sd-meta">
+                        Scalability · Reliability · Trade-offs
+                    </span>
+                </div>
+            </section>
+
+            <!-- PHASE 0 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 0: What is System Design?</h2>
+
+                <p class="sd-text">
+                    System Design means creating a blueprint of a large-scale system:
+                    components, communication, scaling strategy and failure handling.
+                </p>
+
+                <ul class="sd-points">
+                    <li>Components kaunse honge</li>
+                    <li>Kaise communicate karenge</li>
+                    <li>Scale kaise karega</li>
+                    <li>Failure handling</li>
+                </ul>
+
+                <p class="sd-note">
+                    Interview opener: “Design a scalable system for ___”
+                </p>
+            </section>
+
+            <!-- PHASE 1 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 1: Basics</h2>
+
+                <ul class="sd-points">
+                    <li>Client–Server architecture</li>
+                    <li>HTTP & REST APIs</li>
+                    <li>Status codes & JSON</li>
+                </ul>
+
+                <p class="sd-note">
+                    Har real system isi base pe banta hai.
+                </p>
+            </section>
+
+            <!-- PHASE 2 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 2: Scalability</h2>
+
+                <ul class="sd-points">
+                    <li>Vertical scaling (powerful server)</li>
+                    <li>Horizontal scaling (multiple servers)</li>
+                </ul>
+
+                <p class="sd-note">
+                    Real-world systems prefer horizontal scaling.
+                </p>
+            </section>
+
+            <!-- PHASE 3 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 3: Load Balancing</h2>
+
+                <ul class="sd-points">
+                    <li>Traffic distribution</li>
+                    <li>High availability</li>
+                    <li>Round Robin, Least Connections</li>
+                </ul>
+
+                <p class="sd-note">
+                    “Why do we need a load balancer?” — very common question.
+                </p>
+            </section>
+
+            <!-- PHASE 4 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 4: Databases</h2>
+
+                <ul class="sd-points">
+                    <li>SQL vs NoSQL</li>
+                    <li>Read vs Write heavy systems</li>
+                    <li>Indexing, Replication</li>
+                    <li>Sharding (basic idea)</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 5 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 5: Caching</h2>
+
+                <ul class="sd-points">
+                    <li>Client-side cache</li>
+                    <li>Server-side cache</li>
+                    <li>Redis / Memcached</li>
+                </ul>
+
+                <p class="sd-note">
+                    Cache = performance boost + less DB load.
+                </p>
+            </section>
+
+            <!-- PHASE 6 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 6: Consistency & Availability</h2>
+
+                <ul class="sd-points">
+                    <li>CAP theorem (basic)</li>
+                    <li>Consistency vs Availability</li>
+                    <li>Partition tolerance</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 7 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 7: Async Processing</h2>
+
+                <ul class="sd-points">
+                    <li>Message queues</li>
+                    <li>Background jobs</li>
+                    <li>Kafka / RabbitMQ (concept)</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 8 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 8: Reliability & Fault Tolerance</h2>
+
+                <ul class="sd-points">
+                    <li>Replication</li>
+                    <li>Failover</li>
+                    <li>Health checks</li>
+                    <li>Graceful degradation</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 9 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 9: Security</h2>
+
+                <ul class="sd-points">
+                    <li>Authentication & Authorization</li>
+                    <li>HTTPS</li>
+                    <li>Rate limiting</li>
+                    <li>Encryption</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 10 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 10: High-Level Design (HLD)</h2>
+
+                <ul class="sd-points">
+                    <li>Services (boxes)</li>
+                    <li>Connections</li>
+                    <li>Data flow</li>
+                </ul>
+
+                <p class="sd-note">
+                    Freshers ke liye mostly HLD hi poocha jata hai.
+                </p>
+            </section>
+
+            <!-- PHASE 11 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 11: Low-Level Design (LLD)</h2>
+
+                <ul class="sd-points">
+                    <li>Classes</li>
+                    <li>APIs</li>
+                    <li>Data models</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 12 -->
+            <section class="section sd-section" data-scroll-section>
+                <h2 class="section-title">Phase 12: Common Questions</h2>
+
+                <ul class="sd-points">
+                    <li>URL Shortener</li>
+                    <li>Chat Application</li>
+                    <li>News Feed</li>
+                    <li>Rate Limiter</li>
+                </ul>
+            </section>
+
+            <!-- FINAL -->
+            <section class="section sd-next" data-scroll-section>
+                <h2>Final System Design Checklist</h2>
+
+                <p>
+                    Tum system-design ready ho jab tum requirements clarify kar sakte ho,
+                    HLD bana sakte ho, caching & DB justify kar sakte ho,
+                    aur trade-offs clearly explain kar pao.
+                </p>
+
+                <a href="coding-interview.html" class="btn-primary">
+                    Move to Coding Interviews →
+                </a>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" data-scroll-section>
+            <div class="footer-content">
+                <img src="assets/images/logo.png" alt="K-12 Logo" height="60">
+                <p>© 2025 K-12 Community – Pacific Institute of Technology</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- PAGE ANIMATIONS -->
+    <script>
+        if (document.querySelector(".sd-hero")) {
+
+            gsap.from(".sd-hero h1", {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            gsap.from(".sd-hero p", {
+                y: 40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 0.8
+            });
+
+            gsap.utils.toArray(".sd-section .section-title").forEach(title => {
+                gsap.from(title, {
+                    scrollTrigger: {
+                        trigger: title,
+                        scroller: "[data-scroll-container]",
+                        start: "top 85%"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

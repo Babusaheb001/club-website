@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSA Roadmap | K-12</title>
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video id="universal-bg-video"
+        src="assets/videos/hero-video3.mp4"
+        autoplay muted loop playsinline></video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="K-12 Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#roadmaps">Roadmaps</a></li>
+            <li><a href="index.html#paths">Docs</a></li>
+        </ul>
+
+        <a href="index.html#paths" class="btn-primary">Get Started</a>
+    </nav>
+
+    <!-- LOCOMOTIVE CONTAINER -->
+    <div data-scroll-container>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="section dsa-hero" data-scroll-section>
+                <div class="home-glass">
+                    <h1>Data Structures & Algorithms</h1>
+
+                    <p>
+                        Learn how to store data efficiently, solve problems
+                        optimally, and write scalable, interview-ready code.
+                    </p>
+
+                    <span class="dsa-meta">
+                        Intermediate · Mandatory · Duration: 2–4 Months
+                    </span>
+                </div>
+            </section>
+
+            <!-- WHY DSA -->
+            <section class="section dsa-section" data-scroll-section>
+                <h2 class="section-title">Why DSA Matters</h2>
+
+                <p class="dsa-text">
+                    DSA teaches you how to think in terms of efficiency.
+                    It helps you choose the right approach, reduce time
+                    complexity, and write optimal solutions.
+                </p>
+
+                <ul class="dsa-points">
+                    <li>DSA is the backbone of technical interviews</li>
+                    <li>Improves problem-solving and logical thinking</li>
+                    <li>Required for scalable systems</li>
+                    <li>Makes you language-independent</li>
+                </ul>
+            </section>
+
+            <!-- DSA ROADMAP -->
+            <section class="section dsa-section" data-scroll-section>
+                <h2 class="section-title">DSA Roadmap</h2>
+
+                <div class="roadmap-grid">
+
+                    <div class="roadmap-card card">
+                        <h3>Complexity Analysis</h3>
+                        <p>Time & Space Complexity, Big-O notation</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Arrays</h3>
+                        <p>Traversal, Sliding Window, Prefix Sum</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Strings</h3>
+                        <p>Pattern matching, hashing, manipulation</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Recursion & Backtracking</h3>
+                        <p>Base cases, recursion tree, problems</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Linked List</h3>
+                        <p>Singly, Doubly, Cycle detection</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Stacks & Queues</h3>
+                        <p>Applications, monotonic stack</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Trees</h3>
+                        <p>Binary Tree, BST, Traversals</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Heaps</h3>
+                        <p>Priority Queue, Heap Sort</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Graphs</h3>
+                        <p>BFS, DFS, Shortest Path</p>
+                    </div>
+
+                    <div class="roadmap-card card">
+                        <h3>Dynamic Programming</h3>
+                        <p>Memoization, Tabulation, Patterns</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- PRACTICE STRATEGY -->
+            <section class="section dsa-section" data-scroll-section>
+                <h2 class="section-title">Practice Strategy</h2>
+
+                <ul class="dsa-points">
+                    <li>Understand problem before coding</li>
+                    <li>Dry-run on paper</li>
+                    <li>Write brute force first</li>
+                    <li>Optimize step by step</li>
+                    <li>Practice daily (2–4 problems)</li>
+                </ul>
+            </section>
+
+            <!-- NEXT -->
+            <section class="section dsa-next" data-scroll-section>
+                <h2>Next Step</h2>
+
+                <p>
+                    After mastering DSA, move to
+                    Coding Interviews & System Design.
+                </p>
+
+                <a href="coding-interviews.html" class="btn-primary">
+                    Go to Coding Interviews →
+                </a>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" data-scroll-section>
+            <div class="footer-content">
+                <img src="assets/images/logo.png" alt="K-12 Logo" height="60">
+                <p>© 2025 K-12 Community – Pacific Institute of Technology</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- DSA ANIMATIONS -->
+    <script>
+        if (document.querySelector(".dsa-hero")) {
+
+            gsap.from(".dsa-hero h1", {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            gsap.from(".dsa-hero p", {
+                y: 40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 0.8
+            });
+
+            gsap.utils.toArray(".dsa-section .section-title").forEach(title => {
+                gsap.from(title, {
+                    scrollTrigger: {
+                        trigger: title,
+                        scroller: "[data-scroll-container]",
+                        start: "top 85%"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8
+                });
+            });
+
+            gsap.utils.toArray(".roadmap-card").forEach(card => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        scroller: "[data-scroll-container]",
+                        start: "top 85%"
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.6
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

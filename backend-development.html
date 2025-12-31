@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Development Roadmap | K-12</title>
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video id="universal-bg-video"
+        src="assets/videos/hero-video9.mp4"
+        autoplay muted loop playsinline></video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="K-12 Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#roadmaps">Roadmaps</a></li>
+            <li><a href="index.html#paths">Docs</a></li>
+        </ul>
+
+        <a href="index.html#paths" class="btn-primary">Get Started</a>
+    </nav>
+
+    <!-- LOCOMOTIVE CONTAINER -->
+    <div data-scroll-container>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="section be-hero" data-scroll-section>
+                <div class="home-glass">
+                    <h1>Backend Development Roadmap</h1>
+
+                    <p>
+                        Backend is the brain of any application.
+                        This roadmap focuses on server-side logic,
+                        databases, authentication, security, and
+                        interview-ready backend development.
+                    </p>
+
+                    <span class="be-meta">
+                        Intermediate · Mandatory · Server-Side Focused
+                    </span>
+                </div>
+            </section>
+
+            <!-- PHASE 0 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 0: Backend Basics (Foundation Clear Karo)</h2>
+
+                <p class="be-text">
+                    Backend handles everything that the user does not see.
+                    Frontend shows data, backend processes and secures it.
+                </p>
+
+                <ul class="be-points">
+                    <li>Data store karna</li>
+                    <li>Business logic chalana</li>
+                    <li>Authentication handle karna</li>
+                    <li>Security enforce karna</li>
+                </ul>
+
+                <p class="be-note">
+                    Interview question: <em>“What is backend?”</em>
+                </p>
+            </section>
+
+            <!-- PHASE 1 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 1: Programming Language (Choose ONE)</h2>
+
+                <ul class="be-points">
+                    <li><strong>Node.js (JavaScript):</strong> most popular, fast entry</li>
+                    <li><strong>Java (Spring Boot):</strong> enterprise-level backend</li>
+                    <li><strong>Python (Django / Flask):</strong> clean and readable</li>
+                </ul>
+
+                <p class="be-text">
+                    Backend developer ko asynchronous programming
+                    clearly samajhni chahiye.
+                </p>
+
+                <p class="be-note">
+                    Async samajh nahi aaya = backend fail.
+                </p>
+            </section>
+
+            <!-- PHASE 2 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 2: How Backend Works</h2>
+
+                <ul class="be-points">
+                    <li>Client request bhejta hai</li>
+                    <li>Server process karta hai</li>
+                    <li>Database data store karta hai</li>
+                    <li>Server response deta hai</li>
+                </ul>
+
+                <h3 class="be-subtitle">HTTP Basics (Interview Favorite)</h3>
+
+                <ul class="be-points">
+                    <li>GET, POST, PUT, DELETE</li>
+                    <li>200, 201, 400, 401, 404, 500</li>
+                </ul>
+
+                <p class="be-note">
+                    Status codes galat bole = minus points.
+                </p>
+            </section>
+
+            <!-- PHASE 3 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 3: Backend Framework (Actual Development)</h2>
+
+                <p class="be-text">
+                    Node.js + Express backend interviews me sabse common hai.
+                </p>
+
+                <ul class="be-points">
+                    <li>Server creation</li>
+                    <li>Routing</li>
+                    <li>Request & Response</li>
+                    <li>Middleware</li>
+                    <li>Error handling</li>
+                </ul>
+
+                <p class="be-note">
+                    Middleware se auth, logging, validation hota hai.
+                </p>
+            </section>
+
+            <!-- PHASE 4 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 4: REST API Development</h2>
+
+                <p class="be-text">
+                    REST API frontend aur backend ke beech bridge hoti hai.
+                </p>
+
+                <ul class="be-points">
+                    <li>Stateless architecture</li>
+                    <li>Resource-based URLs</li>
+                    <li>Proper HTTP methods</li>
+                    <li>JSON responses</li>
+                </ul>
+
+                <p class="be-note">
+                    Common interview task: “Design an API for users.”
+                </p>
+            </section>
+
+            <!-- PHASE 5 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 5: Database (Data = Power)</h2>
+
+                <ul class="be-points">
+                    <li>SQL: MySQL / PostgreSQL (structured data)</li>
+                    <li>NoSQL: MongoDB (flexible schema)</li>
+                    <li>CRUD operations</li>
+                    <li>Relationships & Indexing</li>
+                </ul>
+
+                <p class="be-note">
+                    Interview question: “When to choose SQL over NoSQL?”
+                </p>
+            </section>
+
+            <!-- PHASE 6 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 6: Authentication & Authorization</h2>
+
+                <ul class="be-points">
+                    <li>Login / Signup</li>
+                    <li>Password hashing</li>
+                    <li>JWT tokens</li>
+                    <li>Role-based access</li>
+                    <li>Cookies vs LocalStorage</li>
+                </ul>
+
+                <p class="be-note">
+                    Security weak hui = direct rejection.
+                </p>
+            </section>
+
+            <!-- PHASE 7 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 7: Validation & Error Handling</h2>
+
+                <ul class="be-points">
+                    <li>Input validation</li>
+                    <li>Centralized error handler</li>
+                    <li>Correct status codes</li>
+                    <li>Injection prevention</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 8 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 8: Backend Security</h2>
+
+                <ul class="be-points">
+                    <li>bcrypt password hashing</li>
+                    <li>CORS</li>
+                    <li>Rate limiting</li>
+                    <li>Environment variables</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 9 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 9: Backend Projects</h2>
+
+                <ul class="be-points">
+                    <li>Auth-based REST API</li>
+                    <li>CRUD backend</li>
+                    <li>Role-based system</li>
+                    <li>Full-stack backend</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 10 -->
+            <section class="section be-section" data-scroll-section>
+                <h2 class="section-title">Phase 10: Backend Interview Prep</h2>
+
+                <ul class="be-points">
+                    <li>What is REST?</li>
+                    <li>Middleware kya hota hai?</li>
+                    <li>JWT flow</li>
+                    <li>SQL vs NoSQL</li>
+                    <li>How to secure APIs?</li>
+                </ul>
+            </section>
+
+            <!-- FINAL -->
+            <section class="section be-next" data-scroll-section>
+                <h2>Final Backend Checklist</h2>
+
+                <p>
+                    Tum backend-ready ho jab tum REST APIs bana sakte ho,
+                    authentication samajhte ho, database confident ho,
+                    aur apne project ko clearly explain kar sakte ho.
+                </p>
+
+                <a href="system-design.html" class="btn-primary">
+                    Move to System Design →
+                </a>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" data-scroll-section>
+            <div class="footer-content">
+                <img src="assets/images/logo.png" alt="K-12 Logo" height="60">
+                <p>© 2025 K-12 Community – Pacific Institute of Technology</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- PAGE ANIMATIONS -->
+    <script>
+        if (document.querySelector(".be-hero")) {
+
+            gsap.from(".be-hero h1", {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            gsap.from(".be-hero p", {
+                y: 40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 0.8
+            });
+
+            gsap.utils.toArray(".be-section .section-title").forEach(title => {
+                gsap.from(title, {
+                    scrollTrigger: {
+                        trigger: title,
+                        scroller: "[data-scroll-container]",
+                        start: "top 85%"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

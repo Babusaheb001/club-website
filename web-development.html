@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Roadmap | K-12</title>
+
+    <!-- Locomotive Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video id="universal-bg-video"
+        src="assets/videos/hero-video10.mp4"
+        autoplay muted loop playsinline></video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="K-12 Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#roadmaps">Roadmaps</a></li>
+            <li><a href="index.html#paths">Docs</a></li>
+        </ul>
+
+        <a href="index.html#paths" class="btn-primary">Get Started</a>
+    </nav>
+
+    <!-- LOCOMOTIVE CONTAINER -->
+    <div data-scroll-container>
+
+        <main>
+
+            <!-- HERO -->
+            <section class="section wd-hero" data-scroll-section>
+                <div class="home-glass">
+                    <h1>Web Development Roadmap</h1>
+
+                    <p>
+                        A complete roadmap to become a job-ready Web Developer.
+                        Covers frontend, backend, databases, security, and interviews
+                        with real-world explanations.
+                    </p>
+
+                    <span class="wd-meta">
+                        Beginner → Full-Stack · Mandatory · Industry Focused
+                    </span>
+                </div>
+            </section>
+
+            <!-- PHASE 0 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 0: Web Basics (Skip Nahi Karna)</h2>
+
+                <p class="wd-text">
+                    Before writing HTML or CSS, you must understand how the web works.
+                    This phase is frequently tested in interviews.
+                </p>
+
+                <ul class="wd-points">
+                    <li>Internet kya hai</li>
+                    <li>Website vs Web Application</li>
+                    <li>Client–Server model</li>
+                    <li>Browser ka role</li>
+                    <li>HTTP request–response cycle</li>
+                </ul>
+
+                <p class="wd-note">
+                    Interview question: <em>“What happens when you type google.com in a browser?”</em>
+                </p>
+            </section>
+
+            <!-- PHASE 1 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 1: HTML (Structure of Web)</h2>
+
+                <ul class="wd-points">
+                    <li>Tags & Elements</li>
+                    <li>Head vs Body</li>
+                    <li>Text, Images, Links</li>
+                    <li>Lists & Tables</li>
+                    <li>Forms & Inputs</li>
+                    <li>Semantic HTML (header, nav, section, footer)</li>
+                </ul>
+
+                <p class="wd-note">
+                    Bad HTML = bad SEO + poor accessibility, even if CSS/JS are strong.
+                </p>
+            </section>
+
+            <!-- PHASE 2 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 2: CSS (Look & Feel)</h2>
+
+                <div class="paths-grid">
+
+                    <div class="path-card wd-card">
+                        <h3>CSS Fundamentals</h3>
+                        <p>
+                            Selectors, colors, units, box model,
+                            fonts, typography.
+                        </p>
+                    </div>
+
+                    <div class="path-card wd-card">
+                        <h3>Layout (Very Important)</h3>
+                        <p>
+                            Flexbox, Grid, positioning,
+                            responsive design, media queries.
+                        </p>
+                    </div>
+
+                    <div class="path-card wd-card">
+                        <h3>Advanced CSS</h3>
+                        <p>
+                            Transitions, animations, pseudo-classes,
+                            dark mode design.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="wd-note">
+                    Perfect CSS = fewer JavaScript hacks.
+                </p>
+            </section>
+
+            <!-- PHASE 3 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 3: JavaScript (Brain of Web)</h2>
+
+                <ul class="wd-points">
+                    <li>Variables: var, let, const</li>
+                    <li>Data types, functions, loops</li>
+                    <li>Arrays & objects</li>
+                    <li>DOM manipulation & events</li>
+                    <li>Async JS: callbacks, promises, async/await</li>
+                    <li>Fetch API</li>
+                </ul>
+
+                <p class="wd-note">
+                    Strong JavaScript makes React and backend much easier.
+                </p>
+            </section>
+
+            <!-- PHASE 4 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 4: Git & GitHub</h2>
+
+                <ul class="wd-points">
+                    <li>git init, add, commit</li>
+                    <li>branch & merge</li>
+                    <li>push / pull</li>
+                </ul>
+
+                <p class="wd-note">
+                    No Git knowledge = fresher red flag.
+                </p>
+            </section>
+
+            <!-- PHASE 5 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 5: Frontend Framework (React)</h2>
+
+                <ul class="wd-points">
+                    <li>Components, Props, State</li>
+                    <li>JSX & Conditional Rendering</li>
+                    <li>Hooks (useState, useEffect)</li>
+                    <li>Routing & Context API</li>
+                    <li>API integration</li>
+                </ul>
+
+                <p class="wd-note">
+                    React = UI management, not JavaScript replacement.
+                </p>
+            </section>
+
+            <!-- PHASE 6 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 6: Backend Development</h2>
+
+                <ul class="wd-points">
+                    <li>Node.js + Express OR Java Spring Boot</li>
+                    <li>REST APIs</li>
+                    <li>Middleware</li>
+                    <li>Authentication & Authorization</li>
+                </ul>
+
+                <p class="wd-note">
+                    Full-stack developers are preferred.
+                </p>
+            </section>
+
+            <!-- PHASE 7 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 7: Database</h2>
+
+                <ul class="wd-points">
+                    <li>SQL: MySQL / PostgreSQL</li>
+                    <li>NoSQL: MongoDB</li>
+                    <li>CRUD operations</li>
+                    <li>Indexing & basic optimization</li>
+                </ul>
+            </section>
+
+            <!-- PHASE 8 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 8: Authentication & Security</h2>
+
+                <ul class="wd-points">
+                    <li>Login / Signup flow</li>
+                    <li>JWT</li>
+                    <li>Cookies vs LocalStorage</li>
+                    <li>Password hashing</li>
+                </ul>
+
+                <p class="wd-note">
+                    Security mistakes = direct company loss.
+                </p>
+            </section>
+
+            <!-- PHASE 9 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 9: Projects (Most Important)</h2>
+
+                <ul class="wd-points">
+                    <li>Portfolio website</li>
+                    <li>CRUD application</li>
+                    <li>Auth-based app</li>
+                    <li>Full-stack project</li>
+                </ul>
+
+                <p class="wd-note">
+                    Projects matter more than certificates.
+                </p>
+            </section>
+
+            <!-- PHASE 10 -->
+            <section class="section wd-section" data-scroll-section>
+                <h2 class="section-title">Phase 10: Web Dev Interview Prep</h2>
+
+                <ul class="wd-points">
+                    <li>HTML semantics</li>
+                    <li>CSS Flexbox vs Grid</li>
+                    <li>JS closures & event bubbling</li>
+                    <li>React lifecycle</li>
+                    <li>API status codes</li>
+                </ul>
+            </section>
+
+            <!-- FINAL -->
+            <section class="section wd-next" data-scroll-section>
+                <h2>Final Web Dev Checklist</h2>
+
+                <p>
+                    You are job-ready if you can build responsive UI,
+                    consume APIs, explain your projects, debug issues,
+                    and understand frontend-backend flow.
+                </p>
+
+                <a href="coding-interviews.html" class="btn-primary">
+                    Move to Coding & Interviews →
+                </a>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" data-scroll-section>
+            <div class="footer-content">
+                <img src="assets/images/logo.png" alt="K-12 Logo" height="60">
+                <p>© 2025 K-12 Community – Pacific Institute of Technology</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- PAGE ANIMATIONS -->
+    <script>
+        if (document.querySelector(".wd-hero")) {
+
+            gsap.from(".wd-hero h1", {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            gsap.from(".wd-hero p", {
+                y: 40,
+                opacity: 0,
+                delay: 0.2,
+                duration: 0.8
+            });
+
+            gsap.utils.toArray(".wd-section .section-title").forEach(title => {
+                gsap.from(title, {
+                    scrollTrigger: {
+                        trigger: title,
+                        scroller: "[data-scroll-container]",
+                        start: "top 85%"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
