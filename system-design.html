@@ -41,215 +41,264 @@
     <!-- LOCOMOTIVE CONTAINER -->
     <div data-scroll-container>
 
-        <main>
+   <main>
 
-            <!-- HERO -->
-            <section class="section sd-hero" data-scroll-section>
-                <div class="home-glass">
-                    <h1>System Design Roadmap</h1>
-                    <p>
-                        System Design focuses on building scalable,
-                        reliable and high-performance software systems.
-                        Interviews test thinking, not perfection.
-                    </p>
-                    <span class="sd-meta">
-                        Scalability · Reliability · Trade-offs
-                    </span>
-                </div>
-            </section>
+    <!-- HERO -->
+    <section class="section sd-hero" data-scroll-section>
+        <div class="home-glass">
+            <h1>System Design Roadmap</h1>
+            <p>
+                A complete, interview-focused System Design roadmap.
+                Learn how to design scalable, reliable, and high-performance
+                systems by understanding architecture, trade-offs, and
+                real-world constraints.
+            </p>
+            <span class="sd-meta">
+                Scalability · Reliability · Trade-offs · Interviews
+            </span>
+        </div>
+    </section>
 
-            <!-- PHASE 0 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 0: What is System Design?</h2>
+    <!-- OVERVIEW -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Roadmap Overview</h2>
 
-                <p class="sd-text">
-                    System Design means creating a blueprint of a large-scale system:
-                    components, communication, scaling strategy and failure handling.
-                </p>
+        <ul class="sd-points">
+            <li>Total Duration: 3–4 Months</li>
+            <li>Weekly Time Commitment: 10–15 hours</li>
+            <li>Prerequisite: Backend fundamentals</li>
+            <li>Outcome: System design interview readiness</li>
+        </ul>
+    </section>
 
-                <ul class="sd-points">
-                    <li>Components kaunse honge</li>
-                    <li>Kaise communicate karenge</li>
-                    <li>Scale kaise karega</li>
-                    <li>Failure handling</li>
-                </ul>
+    <!-- PHASE 0 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 0: System Design Mindset</h2>
 
-                <p class="sd-note">
-                    Interview opener: “Design a scalable system for ___”
-                </p>
-            </section>
+        <p class="sd-text">
+            System Design is about thinking clearly under constraints.
+            Interviews test how you break problems, not perfect answers.
+        </p>
 
-            <!-- PHASE 1 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 1: Basics</h2>
+        <ul class="sd-points">
+            <li>What is System Design?</li>
+            <li>Why System Design matters</li>
+            <li>Functional vs Non-functional requirements</li>
+            <li>Scalability, Reliability, Availability</li>
+            <li>Design trade-offs</li>
+        </ul>
 
-                <ul class="sd-points">
-                    <li>Client–Server architecture</li>
-                    <li>HTTP & REST APIs</li>
-                    <li>Status codes & JSON</li>
-                </ul>
+        <p class="sd-note">
+            Duration: 1 Week · Interview foundation
+        </p>
+    </section>
 
-                <p class="sd-note">
-                    Har real system isi base pe banta hai.
-                </p>
-            </section>
+    <!-- PHASE 1 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 1: Core System Design Basics</h2>
 
-            <!-- PHASE 2 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 2: Scalability</h2>
+        <ul class="sd-points">
+            <li>Client–Server architecture</li>
+            <li>Monolithic vs Microservices</li>
+            <li>Stateless vs Stateful services</li>
+            <li>Horizontal vs Vertical scaling</li>
+        </ul>
 
-                <ul class="sd-points">
-                    <li>Vertical scaling (powerful server)</li>
-                    <li>Horizontal scaling (multiple servers)</li>
-                </ul>
+        <h3 class="sd-subtitle">Mini Design</h3>
+        <p class="sd-text">
+            Design a basic URL Shortener (high-level).
+        </p>
 
-                <p class="sd-note">
-                    Real-world systems prefer horizontal scaling.
-                </p>
-            </section>
+        <p class="sd-note">
+            Duration: 2 Weeks
+        </p>
+    </section>
 
-            <!-- PHASE 3 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 3: Load Balancing</h2>
+    <!-- PHASE 2 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 2: Networking & Communication</h2>
 
-                <ul class="sd-points">
-                    <li>Traffic distribution</li>
-                    <li>High availability</li>
-                    <li>Round Robin, Least Connections</li>
-                </ul>
+        <ul class="sd-points">
+            <li>HTTP vs HTTPS</li>
+            <li>REST vs gRPC (conceptual)</li>
+            <li>DNS basics</li>
+            <li>TCP vs UDP</li>
+            <li>Latency vs Throughput</li>
+        </ul>
 
-                <p class="sd-note">
-                    “Why do we need a load balancer?” — very common question.
-                </p>
-            </section>
+        <h3 class="sd-subtitle">Mini Design</h3>
+        <p class="sd-text">
+            High-level design of a chat application.
+        </p>
 
-            <!-- PHASE 4 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 4: Databases</h2>
+        <p class="sd-note">
+            Duration: 2 Weeks
+        </p>
+    </section>
 
-                <ul class="sd-points">
-                    <li>SQL vs NoSQL</li>
-                    <li>Read vs Write heavy systems</li>
-                    <li>Indexing, Replication</li>
-                    <li>Sharding (basic idea)</li>
-                </ul>
-            </section>
+    <!-- PHASE 3 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 3: Database Design at Scale</h2>
 
-            <!-- PHASE 5 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 5: Caching</h2>
+        <ul class="sd-points">
+            <li>SQL vs NoSQL decision making</li>
+            <li>Read-heavy vs write-heavy systems</li>
+            <li>Indexing strategies</li>
+            <li>Replication</li>
+            <li>Sharding</li>
+            <li>CAP Theorem</li>
+        </ul>
 
-                <ul class="sd-points">
-                    <li>Client-side cache</li>
-                    <li>Server-side cache</li>
-                    <li>Redis / Memcached</li>
-                </ul>
+        <h3 class="sd-subtitle">Design Exercise</h3>
+        <p class="sd-text">
+            Design database schema for a social media platform.
+        </p>
 
-                <p class="sd-note">
-                    Cache = performance boost + less DB load.
-                </p>
-            </section>
+        <p class="sd-note">
+            Duration: 3 Weeks · Interview favorite
+        </p>
+    </section>
 
-            <!-- PHASE 6 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 6: Consistency & Availability</h2>
+    <!-- PHASE 4 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 4: Caching & Performance</h2>
 
-                <ul class="sd-points">
-                    <li>CAP theorem (basic)</li>
-                    <li>Consistency vs Availability</li>
-                    <li>Partition tolerance</li>
-                </ul>
-            </section>
+        <ul class="sd-points">
+            <li>Why caching is required</li>
+            <li>Client-side cache</li>
+            <li>Server-side cache</li>
+            <li>CDN</li>
+            <li>Cache eviction strategies</li>
+            <li>Redis basics</li>
+        </ul>
 
-            <!-- PHASE 7 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 7: Async Processing</h2>
+        <h3 class="sd-subtitle">Design Exercise</h3>
+        <p class="sd-text">
+            Optimize a news feed using caching.
+        </p>
 
-                <ul class="sd-points">
-                    <li>Message queues</li>
-                    <li>Background jobs</li>
-                    <li>Kafka / RabbitMQ (concept)</li>
-                </ul>
-            </section>
+        <p class="sd-note">
+            Duration: 2 Weeks
+        </p>
+    </section>
 
-            <!-- PHASE 8 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 8: Reliability & Fault Tolerance</h2>
+    <!-- PHASE 5 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 5: Asynchronous Systems</h2>
 
-                <ul class="sd-points">
-                    <li>Replication</li>
-                    <li>Failover</li>
-                    <li>Health checks</li>
-                    <li>Graceful degradation</li>
-                </ul>
-            </section>
+        <ul class="sd-points">
+            <li>Synchronous vs Asynchronous processing</li>
+            <li>Message queues</li>
+            <li>Event-driven architecture</li>
+            <li>Kafka / RabbitMQ (conceptual)</li>
+        </ul>
 
-            <!-- PHASE 9 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 9: Security</h2>
+        <h3 class="sd-subtitle">Design Exercise</h3>
+        <p class="sd-text">
+            Order processing system with async services.
+        </p>
 
-                <ul class="sd-points">
-                    <li>Authentication & Authorization</li>
-                    <li>HTTPS</li>
-                    <li>Rate limiting</li>
-                    <li>Encryption</li>
-                </ul>
-            </section>
+        <p class="sd-note">
+            Duration: 2 Weeks
+        </p>
+    </section>
 
-            <!-- PHASE 10 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 10: High-Level Design (HLD)</h2>
+    <!-- PHASE 6 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 6: Reliability & Fault Tolerance</h2>
 
-                <ul class="sd-points">
-                    <li>Services (boxes)</li>
-                    <li>Connections</li>
-                    <li>Data flow</li>
-                </ul>
+        <ul class="sd-points">
+            <li>Single point of failure</li>
+            <li>Failover strategies</li>
+            <li>Health checks</li>
+            <li>Retry mechanisms</li>
+            <li>Circuit breakers</li>
+            <li>Rate limiting</li>
+        </ul>
 
-                <p class="sd-note">
-                    Freshers ke liye mostly HLD hi poocha jata hai.
-                </p>
-            </section>
+        <p class="sd-note">
+            Duration: 2 Weeks
+        </p>
+    </section>
 
-            <!-- PHASE 11 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 11: Low-Level Design (LLD)</h2>
+    <!-- PHASE 7 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 7: Security in System Design</h2>
 
-                <ul class="sd-points">
-                    <li>Classes</li>
-                    <li>APIs</li>
-                    <li>Data models</li>
-                </ul>
-            </section>
+        <ul class="sd-points">
+            <li>Authentication & Authorization at scale</li>
+            <li>OAuth basics</li>
+            <li>API Gateway</li>
+            <li>DDoS protection</li>
+            <li>Secrets management</li>
+        </ul>
 
-            <!-- PHASE 12 -->
-            <section class="section sd-section" data-scroll-section>
-                <h2 class="section-title">Phase 12: Common Questions</h2>
+        <p class="sd-note">
+            Duration: 1–2 Weeks
+        </p>
+    </section>
 
-                <ul class="sd-points">
-                    <li>URL Shortener</li>
-                    <li>Chat Application</li>
-                    <li>News Feed</li>
-                    <li>Rate Limiter</li>
-                </ul>
-            </section>
+    <!-- PHASE 8 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 8: High-Level Design (HLD)</h2>
 
-            <!-- FINAL -->
-            <section class="section sd-next" data-scroll-section>
-                <h2>Final System Design Checklist</h2>
+        <ul class="sd-points">
+            <li>Identify components</li>
+            <li>Define data flow</li>
+            <li>Service communication</li>
+            <li>Scaling strategy</li>
+        </ul>
 
-                <p>
-                    Tum system-design ready ho jab tum requirements clarify kar sakte ho,
-                    HLD bana sakte ho, caching & DB justify kar sakte ho,
-                    aur trade-offs clearly explain kar pao.
-                </p>
+        <p class="sd-note">
+            Freshers are mostly evaluated on HLD.
+        </p>
+    </section>
 
-                <a href="coding-interview.html" class="btn-primary">
-                    Move to Coding Interviews →
-                </a>
-            </section>
+    <!-- PHASE 9 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 9: Low-Level Design (LLD)</h2>
 
-        </main>
+        <ul class="sd-points">
+            <li>Class design</li>
+            <li>API contracts</li>
+            <li>Database models</li>
+        </ul>
+    </section>
+
+    <!-- PHASE 10 -->
+    <section class="section sd-section" data-scroll-section>
+        <h2 class="section-title">Phase 10: System Design Case Studies</h2>
+
+        <ul class="sd-points">
+            <li>Design URL Shortener</li>
+            <li>Design Instagram</li>
+            <li>Design WhatsApp</li>
+            <li>Design YouTube</li>
+            <li>Design Rate Limiter</li>
+        </ul>
+
+        <p class="sd-note">
+            Most interviews are based on these patterns.
+        </p>
+    </section>
+
+    <!-- FINAL -->
+    <section class="section sd-next" data-scroll-section>
+        <h2>Final System Design Checklist</h2>
+
+        <p>
+            You are system-design ready if you can clarify requirements,
+            draw high-level architecture, justify database and caching choices,
+            explain scalability, and discuss trade-offs confidently.
+        </p>
+
+        <a href="coding-interviews.html" class="btn-primary">
+            Move to Coding Interviews →
+        </a>
+    </section>
+
+</main>
+
 
         <!-- FOOTER -->
         <footer class="site-footer" data-scroll-section>
