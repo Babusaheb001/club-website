@@ -168,8 +168,13 @@ body::before {
     border: none;
     cursor: pointer;
 
-    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    /* background: linear-gradient(135deg, #4f46e5, #9333ea); */
+    background-color: rgba(239, 192, 74, 0.858);
     color: #ffffff;
+}
+
+.home-glass .btn-primary{
+    margin-top : 20px;
 }
 
 /* =========================================================
